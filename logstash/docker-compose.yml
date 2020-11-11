@@ -1,0 +1,13 @@
+version: '3'
+services:
+  logstash:
+    mem_limit: 512m
+    build: .
+    ports:
+      - 5044:5044
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
